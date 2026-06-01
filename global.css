@@ -1,0 +1,56 @@
+/* =========================================
+   GLOBAIS, CORES E CABEÇALHO
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+:root {
+    --azul-corporativo: #1b2952; 
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --cinza-fundo: #F4F5F7; 
+    --cinza-texto: #333333;
+    --cinza-borda: #E2E8F0;
+}
+
+body {
+    background-color: var(--cinza-fundo);
+    color: var(--cinza-texto);
+}
+
+header {
+    background-color: var(--azul-corporativo);
+    color: var(--branco);
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 50px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#logo-principal {
+    height: 55px; 
+    width: auto;
+}
+
+nav ul {
+    display: flex; 
+    list-style: none; 
+    gap: 30px; 
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 0.95rem;
+    transition: opacity 0.3s ease; 
+}
+
+nav a:hover {
+    opacity: 0.8; 
+}

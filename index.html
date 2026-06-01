@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet | Dunder Mifflin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="diretorio.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="imagens/logobrancotheoffice.png" alt="Logo Dunder Mifflin" id="logo-principal">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Painel Inicial</a></li>
+                <li><a href="#">Diretório</a></li>
+                <li><a href="#">Documentos</a></li>
+                <li><a href="#">RH & Solicitações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="boas-vindas">
+            <h1>Portal do Colaborador</h1>
+            <p>Acesse comunicados corporativos, gerencie suas solicitações e consulte o diretório da empresa.</p>
+        </section>
+        
+        <section class="dashboard-container">
+            
+            <div class="mural-avisos">
+                <h2>Comunicados Oficiais</h2>
+                
+                <div class="aviso-card">
+                    <div class="aviso-header">
+                        <span class="tag-rh">Recursos Humanos</span>
+                        <span class="data">01 Junho 2026</span>
+                    </div>
+                    <h4>Atualização na Política de Reembolso</h4>
+                    <p>A partir deste mês, todos os recibos de almoço com clientes devem ser enviados via sistema na aba de 'RH & Solicitações' até o dia 5.</p>
+                </div>
+
+                <div class="aviso-card">
+                    <div class="aviso-header">
+                        <span class="tag-gerencia">Gerência</span>
+                        <span class="data">28 Maio 2026</span>
+                    </div>
+                    <h4>Reunião de Vendas Mensal</h4>
+                    <p>A reunião ocorrerá na sala de conferências às 10h. Presença obrigatória para todos os vendedores. Tragam seus relatórios impressos.</p>
+                </div>
+            </div>
+
+            <aside class="painel-lateral">
+                <div class="widget">
+                    <h3>Acesso Rápido</h3>
+                    <ul class="links-uteis">
+                        <li><a href="#">🕒 Bater Ponto Eletrônico</a></li>
+                        <li><a href="#">📄 Visualizar Holerite</a></li>
+                        <li><a href="#">🌴 Solicitar Férias</a></li>
+                        <li><a href="#">🛠️ Chamado de TI</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3>Aniversariantes do Mês</h3>
+                    <ul class="aniversarios">
+                        <li>🎉 Creed Bratton (08/06)</li>
+                        <li>🎉 Kelly Kapoor (15/06)</li>
+                    </ul>
+                </div>
+            </aside>
+
+        </section>
+        <section id="diretorio-container" class="diretorio">
+            <div class="diretorio-header">
+                <h2>Diretório Corporativo</h2>
+                <p>Filial Scranton - Consulta de Ramais e Contatos</p>
+            </div>
+
+            <div class="grid-funcionarios">
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/michael.jpg" alt="Foto de Michael Scott">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Michael Scott</h3>
+                        <span class="cargo">Gerente Regional</span>
+                        <p class="departamento">Gerência</p>
+                        <div class="contato">
+                            <p>✉️ mscott@dunder.com</p>
+                            <p>📞 Ramal: 101</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/toby.png" alt="Foto de Toby Flenderson">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Toby Flenderson</h3>
+                        <span class="cargo">Representante de RH</span>
+                        <p class="departamento">Recursos Humanos</p>
+                        <div class="contato">
+                            <p>✉️ tflenderson@dunder.com</p>
+                            <p>📞 Ramal: 102</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/pam.jpg" alt="Foto de Pam Beesly">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Pam Beesly</h3>
+                        <span class="cargo">Admin. de Escritório</span>
+                        <p class="departamento">Administração</p>
+                        <div class="contato">
+                            <p>✉️ pbeesly@dunder.com</p>
+                            <p>📞 Ramal: 100</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/erin.png" alt="Foto de Erin Hannon">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Erin Hannon</h3>
+                        <span class="cargo">Recepcionista</span>
+                        <p class="departamento">Administração</p>
+                        <div class="contato">
+                            <p>✉️ ehannon@dunder.com</p>
+                            <p>📞 Ramal: 103</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/dwight.jpg" alt="Foto de Dwight Schrute">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Dwight Schrute</h3>
+                        <span class="cargo">Vendedor / Ass. Gerente</span>
+                        <p class="departamento">Vendas</p>
+                        <div class="contato">
+                            <p>✉️ dschrute@dunder.com</p>
+                            <p>📞 Ramal: 201</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/jim.jpg" alt="Foto de Jim Halpert">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Jim Halpert</h3>
+                        <span class="cargo">Vendedor</span>
+                        <p class="departamento">Vendas</p>
+                        <div class="contato">
+                            <p>✉️ jhalpert@dunder.com</p>
+                            <p>📞 Ramal: 202</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/stanley.jpg" alt="Foto de Stanley Hudson">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Stanley Hudson</h3>
+                        <span class="cargo">Vendedor</span>
+                        <p class="departamento">Vendas</p>
+                        <div class="contato">
+                            <p>✉️ shudson@dunder.com</p>
+                            <p>📞 Ramal: 204</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/philys.png" alt="Foto de Phyllis Vance">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Phyllis Vance</h3>
+                        <span class="cargo">Vendedora</span>
+                        <p class="departamento">Vendas</p>
+                        <div class="contato">
+                            <p>✉️ pvance@dunder.com</p>
+                            <p>📞 Ramal: 205</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/andy.png" alt="Foto de Andy Bernard">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Andy Bernard</h3>
+                        <span class="cargo">Vendedor</span>
+                        <p class="departamento">Vendas</p>
+                        <div class="contato">
+                            <p>✉️ abernard@dunder.com</p>
+                            <p>📞 Ramal: 203</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/angela.png" alt="Foto de Angela Martin">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Angela Martin</h3>
+                        <span class="cargo">Contadora Chefe</span>
+                        <p class="departamento">Contabilidade</p>
+                        <div class="contato">
+                            <p>✉️ amartin@dunder.com</p>
+                            <p>📞 Ramal: 301</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/oscar.png" alt="Foto de Oscar Martinez">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Oscar Martinez</h3>
+                        <span class="cargo">Contador</span>
+                        <p class="departamento">Contabilidade</p>
+                        <div class="contato">
+                            <p>✉️ omartinez@dunder.com</p>
+                            <p>📞 Ramal: 302</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/kevin.png" alt="Foto de Kevin Malone">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Kevin Malone</h3>
+                        <span class="cargo">Contador</span>
+                        <p class="departamento">Contabilidade</p>
+                        <div class="contato">
+                            <p>✉️ kmalone@dunder.com</p>
+                            <p>📞 Ramal: 303</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/kellly.png" alt="Foto de Kelly Kapoor">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Kelly Kapoor</h3>
+                        <span class="cargo">Atendimento ao Cliente</span>
+                        <p class="departamento">Suporte</p>
+                        <div class="contato">
+                            <p>✉️ kkapoor@dunder.com</p>
+                            <p>📞 Ramal: 401</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/creed.png" alt="Foto de Creed Bratton">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Creed Bratton</h3>
+                        <span class="cargo">Garantia de Qualidade</span>
+                        <p class="departamento">Qualidade</p>
+                        <div class="contato">
+                            <p>✉️ cbratton@dunder.com</p>
+                            <p>📞 Ramal: 403</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/meredith.png" alt="Foto de Meredith Palmer">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Meredith Palmer</h3>
+                        <span class="cargo">Relações com Fornecedores</span>
+                        <p class="departamento">Suprimentos</p>
+                        <div class="contato">
+                            <p>✉️ mpalmer@dunder.com</p>
+                            <p>📞 Ramal: 402</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/darryl.png" alt="Foto de Darryl Philbin">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Darryl Philbin</h3>
+                        <span class="cargo">Encarregado do Depósito</span>
+                        <p class="departamento">Logística</p>
+                        <div class="contato">
+                            <p>✉️ dphilbin@dunder.com</p>
+                            <p>📞 Ramal: 501</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="imagens/ryan.png" alt="Foto de Ryan Howard">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>Ryan Howard</h3>
+                        <span class="cargo">Temporário</span>
+                        <p class="departamento">Diversos</p>
+                        <div class="contato">
+                            <p>✉️ rhoward@dunder.com</p>
+                            <p>📞 Ramal: 109</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+
+        </section>
+    </main>
+
+</body>
+</html>

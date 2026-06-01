@@ -1,0 +1,97 @@
+/* =========================================
+   BOAS-VINDAS E MURAL DE AVISOS
+========================================= */
+.boas-vindas {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+.boas-vindas h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: var(--preto);
+    font-weight: 700; 
+}
+
+.boas-vindas p {
+    font-size: 1.1rem;
+    color: var(--cinza-texto);
+}
+
+.dashboard-container {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.mural-avisos h2, .painel-lateral h3 {
+    color: var(--azul-corporativo);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.aviso-card {
+    background-color: var(--branco);
+    border-left: 4px solid var(--azul-corporativo);
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.aviso-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.tag-rh { color: #D97706; } 
+.tag-gerencia { color: #059669; } 
+.data { color: #888; }
+
+.aviso-card h4 {
+    font-size: 1.1rem;
+    color: var(--preto);
+    margin-bottom: 8px;
+}
+
+.aviso-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.widget {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--cinza-borda);
+    margin-bottom: 20px;
+}
+
+.links-uteis { list-style: none; }
+.links-uteis li { margin-bottom: 12px; }
+
+.links-uteis a {
+    text-decoration: none;
+    color: var(--cinza-texto);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.links-uteis a:hover { color: var(--azul-corporativo); }
+
+.aniversarios {
+    list-style: none;
+    font-size: 0.95rem;
+    color: var(--cinza-texto);
+    line-height: 1.8;
+}

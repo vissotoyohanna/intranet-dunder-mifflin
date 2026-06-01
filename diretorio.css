@@ -1,0 +1,97 @@
+/* =========================================
+   DIRETÓRIO CORPORATIVO (GRID DE FUNCIONÁRIOS)
+========================================= */
+.diretorio {
+    max-width: 1300px; 
+    margin: 40px auto; 
+    padding: 0 20px;
+}
+
+.diretorio-header {
+    margin-bottom: 30px;
+    text-align: center; 
+}
+
+.diretorio-header h2 {
+    color: var(--azul-corporativo);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.diretorio-header p {
+    color: #666;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.grid-funcionarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px; 
+}
+
+.card-funcionario {
+    background-color: var(--branco);
+    border: 1px solid var(--cinza-borda);
+    border-radius: 8px; 
+    overflow: hidden; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column; 
+}
+
+.card-funcionario:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.foto-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border-bottom: 3px solid var(--azul-corporativo); 
+}
+
+.foto-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: top; 
+}
+
+.info-funcionario {
+    padding: 20px;
+}
+
+.info-funcionario h3 {
+    color: var(--preto);
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.cargo {
+    display: inline-block;
+    background-color: var(--cinza-fundo);
+    color: var(--azul-corporativo);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase; 
+}
+
+.departamento {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 18px;
+    font-weight: 400;
+}
+
+.contato p {
+    font-size: 0.85rem;
+    color: var(--cinza-texto);
+    margin-bottom: 6px;
+    font-weight: 400;
+}
