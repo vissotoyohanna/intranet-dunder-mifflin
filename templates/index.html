@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet | Dunder Mifflin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='diretorio.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='imagens/logobrancotheoffice.png') }}" alt="Logo Dunder Mifflin" id="logo-principal">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Painel Inicial</a></li>
+                <li><a href="#diretorio-container">Diretório</a></li>
+                
+                {% if usuario.nivel_acesso >= 2 %}
+                    <li><a href="/cadastro" style="color: #2563eb; font-weight: bold;">+ Cadastrar RH</a></li>
+                {% endif %}
+
+                <li><a href="#">Documentos</a></li>
+                <li><a href="/logout" style="color: #ef4444;">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="boas-vindas">
+            <h1>Bem-vindo(a), {{ usuario.nome }}!</h1>
+            <p>Painel Corporativo — {{ usuario.cargo }} [Setor: {{ usuario.departamento }}]</p>
+        </section>
+        
+        <section class="dashboard-container">
+            <div class="mural-avisos">
+                <h2>Comunicados Oficiais</h2>
+                
+                <div class="aviso-card">
+                    <div class="aviso-header">
+                        <span class="tag-rh">Recursos Humanos</span>
+                        <span class="data">01 Junho 2026</span>
+                    </div>
+                    <h4>Atualização na Política de Reembolso</h4>
+                    <p>A partir deste mês, todos os recibos de almoço com clientes devem ser enviados via sistema na aba de 'RH & Solicitações' até o dia 5.</p>
+                </div>
+
+                <div class="aviso-card">
+                    <div class="aviso-header">
+                        <span class="tag-gerencia">Gerência</span>
+                        <span class="data">28 Maio 2026</span>
+                    </div>
+                    <h4>Reunião de Vendas Mensal</h4>
+                    <p>A reunião ocorrerá na sala de conferências às 10h. Presença obrigatória para todos os vendedores. Tragam seus relatórios impressos.</p>
+                </div>
+            </div>
+
+            <aside class="painel-lateral">
+                <div class="widget">
+                    <h3>Acesso Rápido</h3>
+                    <ul class="links-uteis">
+                        <li><a href="#">🕒 Bater Ponto Eletrônico</a></li>
+                        <li><a href="#">📄 Visualizar Holerite</a></li>
+                        <li><a href="#">🌴 Solicitar Férias</a></li>
+                        <li><a href="#">🛠️ Chamado de TI</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3>Aniversariantes do Mês</h3>
+                    <ul class="aniversarios">
+                        <li>🎉 Creed Bratton (08/06)</li>
+                        <li>🎉 Kelly Kapoor (15/06)</li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+        
+        <section id="diretorio-container" class="diretorio">
+            <div class="diretorio-header">
+                <h2>Diretório Corporativo</h2>
+                <p>Filial Scranton - Consulta de Ramais e Contatos</p>
+            </div>
+
+           <div class="grid-funcionarios">
+                
+                {% for funcionario in funcionarios %}
+                <div class="card-funcionario">
+                    <div class="foto-container">
+                        <img src="{{ url_for('static', filename='imagens/' ~ funcionario.nome.split()[0].lower() ~ '.jpg') }}" alt="Foto de {{ funcionario.nome }}">
+                    </div>
+                    <div class="info-funcionario">
+                        <h3>{{ funcionario.nome }}</h3>
+                        <span class="cargo">{{ funcionario.cargo }}</span>
+                        <p class="departamento">{{ funcionario.departamento }}</p>
+                        <div class="contato">
+                            <p>✉️ {{ funcionario.email }}</p>
+                            <p>📞 Ramal: {{ funcionario.ramal }}</p>
+                        </div>
+                        
+                        {% if usuario.nivel_acesso >= 2 %}
+                        <div style="margin-top: 15px; display: flex; gap: 10px;">
+                            <a href="/editar/{{ funcionario.id }}" style="background: #e2e8f0; color: #0f172a; padding: 5px 12px; text-decoration: none; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Editar</a>
+                            
+                            <a href="/deletar/{{ funcionario.id }}" style="background: #fee2e2; color: #b91c1c; padding: 5px 12px; text-decoration: none; border-radius: 4px; font-size: 0.8rem; font-weight: bold;" onclick="return confirm('Tem certeza que deseja demitir {{ funcionario.nome }}?');">Demitir</a>
+                        </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

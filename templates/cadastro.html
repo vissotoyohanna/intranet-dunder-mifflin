@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Funcionário | Dunder Mifflin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body class="body-login">
+
+    <div class="login-container" style="margin-top: 2rem; margin-bottom: 2rem;">
+        <div class="login-box" style="width: 450px;">
+            
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="/painel" style="color: #0f172a; text-decoration: none;">← Voltar ao Painel</a>
+            </div>
+
+            <h2>Cadastrar Colaborador</h2>
+            <p>Acesso exclusivo: Gerência e RH.</p>
+
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div style="color: red; font-size: 0.85rem; margin-bottom: 15px; font-weight: bold; text-align: center;">
+                  {{ messages[0] }}
+                </div>
+              {% endif %}
+            {% endwith %}
+
+            <form action="/cadastro" method="POST">
+                <div class="input-group">
+                    <label>Nome Completo</label>
+                    <input type="text" name="nome" required>
+                </div>
+
+                <div class="input-group">
+                    <label>E-mail Corporativo</label>
+                    <input type="email" name="email" placeholder="nome@dunder.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Senha Provisória</label>
+                    <input type="password" name="senha" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Cargo</label>
+                    <input type="text" name="cargo" placeholder="Ex: Contador" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Departamento</label>
+                    <input type="text" name="departamento" placeholder="Ex: Contabilidade" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Ramal</label>
+                    <input type="text" name="ramal" placeholder="Ex: 301" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Nível de Acesso do Sistema</label>
+                    <select name="nivel" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Montserrat', sans-serif;">
+                        <option value="1">Nível 1 - Padrão (Vendas / Admin)</option>
+                        <option value="2">Nível 2 - Gerência (Acesso ao Cadastro)</option>
+                        <option value="3">Nível 3 - Recursos Humanos (Acesso Total)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-login" style="margin-top: 15px;">Registrar Funcionário</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

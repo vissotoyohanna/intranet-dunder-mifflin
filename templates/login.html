@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Restrito | Dunder Mifflin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body class="body-login">
+
+    <div class="login-container">
+        <div class="login-logo">
+            <img src="{{ url_for('static', filename='imagens/logobrancotheoffice.png') }}" alt="Logo Dunder Mifflin">
+        </div>
+
+        <div class="login-box">
+            <h2>Acesso à Intranet</h2>
+            <p>Insira suas credenciais corporativas.</p>
+
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div style="color: red; font-size: 0.85rem; margin-bottom: 15px; font-weight: bold;">
+                  {{ messages[0] }}
+                </div>
+              {% endif %}
+            {% endwith %}
+
+            <form action="/" method="POST">
+                <div class="input-group">
+                    <label for="email">E-mail Corporativo</label>
+                    <input type="email" id="email" name="email" placeholder="nome@dunder.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn-login">Entrar no Sistema</button>
+            </form>
+
+            <a href="#" class="link-esqueci">Esqueceu a senha? Contate o Suporte (Ramal 109)</a>
+        </div>
+    </div>
+
+</body>
+</html>
